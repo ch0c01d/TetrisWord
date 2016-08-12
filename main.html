@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tetris Word</title>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Titillium+Web:400,700&amp;subset=latin" />
+		<link rel="stylesheet" type="text/css" href="asset/css/screen.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/app.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/tema/flatly.min.css" />
+
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body style="overflow:hidden;">
+		<header>
+			<div id="clouds"></div>
+
+			<div class="center">
+				<h1>Tetris Word</h1>
+
+				<div class="row" style="margin-top:100px;">
+					<div class="col-md-3"></div>
+
+					<div class="col-md-6">
+						<ul class="list-group" style="text-align:center;">
+							<a href="pilih.html" style="text-decoration:none;">
+								<li class="list-group-item"><strong>Start Game</strong></li>
+							</a>
+
+							<a href="javascript:;" id="htp" style="text-decoration:none;">
+								<li class="list-group-item"><strong>How To Play</strong></li>
+							</a>
+						</ul>
+					</div>
+
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+
+			<div id="city"></div>
+			<div id="city2"></div>
+
+			<div id="greenleaf">
+				<div id="house"></div>
+			</div>
+		</header>
+
+		<div class="modal fade" id="howtoplay" tabindex="-1" role="dialog" aria-labelledby="howtoplay_lbl">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Tutup"><span aria-hidden="true">&times;</span></button>
+
+						<center>
+							<h3 class="modal-title" id="howtoplay_lbl" style="font-weight:bold;">How To Play</h3>
+						</center>
+					</div>
+
+					<div class="modal-body">
+						<p>Cara memainkan game ini:</p>
+					</div>
+
+					<div class="modal-footer">
+						<div class="col-md-12">
+							<button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Tutup</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="asset/js/libs/jquery/jquery.js"></script>
+		<script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="asset/js/app.js"></script>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$("#htp").click(function() {
+					$("#howtoplay").modal({show: true});
+				});
+			});
+		</script>
+	</body>
+</html>

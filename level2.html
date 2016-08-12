@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tetris Word - Level 2</title>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/tema/flatly.min.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<center>
+						<h1>Level 2</h1>
+					</center>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 col-md-offset-1">
+					<canvas id="canvas_tetris" style="background:#222;width:300px;height:600px;"></canvas>
+				</div>
+
+				<div class="col-md-6">
+					<table class="table table-hover table-striped table-responsive">
+						<thead>
+							<tr>
+								<th><center>Instruksi</center></th>
+								<th><center>Tombol</center></th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr style="text-align:center;">
+								<td>Bawah</td>
+								<td>&#x2193;</td>
+							</tr>
+
+							<tr style="text-align:center;">
+								<td>Kanan</td>
+								<td>&#x2192;</td>
+							</tr>
+
+							<tr style="text-align:center;">
+								<td>Kiri</td>
+								<td>&#x2190;</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div id="table_words">
+						<table class="table table-hover table-striped table-responsive" id="words">
+							<thead>
+								<tr>
+									<th><center>Huruf</center></th>
+									<th><center>Skor</center></th>
+								</tr>
+							</thead>
+
+							<tbody id = "inner_body"></tbody>
+						</table>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<!-- <button id="start" class="btn btn-success btn-lg btn-block" type="button"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Start</button> -->
+							<input id="start" class="btn btn-success btn-lg btn-block" type="button" value="Start" />
+						</div>
+
+						<div class="col-md-6">
+							<!-- <button id="stop" class="btn btn-danger btn-lg btn-block" type="button"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> Stop</button> -->
+							<input id="stop" class="btn btn-danger btn-lg btn-block" type="button" value="Stop" disabled />
+						</div>
+					</div>
+
+					<hr/>
+
+					<div class="row">
+						<div class="col-md-6">
+							<a href="pilih.html" style="text-decoration:none;"><button type="button" class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Pilih Level</button></a>
+						</div>
+
+						<div class="col-md-6">
+							<a href="main.html" style="text-decoration:none;"><button type="button" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Menu Utama</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="sound"></div>
+
+		<div class="modal fade" id="gameover" tabindex="-1" role="dialog" aria-labelledby="gameover_lbl">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Tutup"><span aria-hidden="true">&times;</span></button>
+
+						<center>
+							<h3 class="modal-title" id="gameover_lbl" style="font-weight:bold;">[ Game Over ]</h3>
+						</center>
+					</div>
+
+					<div class="modal-body">
+						<table class="table table-hover table-striped table-responsive" id="game_over_table">
+							<thead>
+								<tr>
+									<th><center>Huruf</center></th>
+									<th><center>Skor</center></th>
+								</tr>
+							</thead>
+
+							<tbody id = "outer_body"></tbody>
+						</table>
+					</div>
+
+					<div class="modal-footer">
+						<div class="col-md-12">
+							<button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Tutup</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="asset/js/libs/jquery/jquery.js"></script>
+		<script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="asset/js/game.js"></script>
+		<script type="text/javascript" src="asset/js/userinput.js"></script>
+		<script type="text/javascript" src="asset/js/audio.js"></script>
+	</body>
+</html>
